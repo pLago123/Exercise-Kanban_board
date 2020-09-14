@@ -6,11 +6,11 @@ This is a layout setup exercise. Most of its functions are just stubs but one ca
 
 ### Shots 📷
 
-![github-small](./images/shot1.png)
+![github-small](./images/shot1.PNG)
 
-![github-small](./images/shot2.png)
+![github-small](./images/shot2.PNG)
 
-![github-small](./images/shot3.png)
+![github-small](./images/shot3.PNG)
 
 ## Running 🚀
 
