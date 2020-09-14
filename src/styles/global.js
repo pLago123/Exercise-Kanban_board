@@ -5,6 +5,8 @@ export const Row = styled.div`
   height: 100%;
   width: 100%;
 
+  overflow: hidden;
+
   @media only screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
@@ -35,8 +37,6 @@ export const PinkGradient = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-
-  overflow: hidden;
 
   background-image: radial-gradient(
     circle at bottom right,
