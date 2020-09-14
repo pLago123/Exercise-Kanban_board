@@ -12,6 +12,10 @@ This is a layout setup exercise. Most of its functions are just stubs but one ca
 
 ![github-small](./images/shot3.PNG)
 
+## Sample 📺
+
+A live version of the program can be found for testing at https://stupefied-jackson-4233c5.netlify.app/
+
 ## Running 🚀
 
 This application can be executed with the command `yarn dev:server` (if you use yarn) or `npm run dev:server` (port: 3000)
