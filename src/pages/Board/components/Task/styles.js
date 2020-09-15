@@ -48,12 +48,26 @@ const appearFromTop = keyframes`
   }
 `;
 
-export const ModalContainer = styled.div`
+export const ModalWrapper = styled.div`
+  display: flex;
   max-width: 70vw;
   min-width: 50vw;
-  height: auto;
 
   margin: auto;
+
+  @media only screen and (max-width: 426px) {
+    min-width: 80vw;
+  }
+`;
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  width: 100%;
+  height: 100%;
+
   padding: 20px;
 
   border-radius: 3px;
@@ -61,10 +75,6 @@ export const ModalContainer = styled.div`
   background-color: white;
 
   animation: ${appearFromTop} 0.5s;
-
-  @media only screen and (max-width: 426px) {
-    min-width: 80vw;
-  }
 `;
 
 export const ModalHeader = styled.div`

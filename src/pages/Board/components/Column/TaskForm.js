@@ -12,6 +12,7 @@ import DateInput from '~/components/DateInput';
 import getValidationErrors from '~/utils/getValidationErrors';
 
 import {
+  ModalWrapper,
   ModalContainer,
   ModalHeader,
   FormWrapper,
@@ -75,31 +76,37 @@ const TaskForm = ({ id }) => {
   );
 
   return (
-    <ModalContainer>
-      <ModalHeader>
-        <h2>Create a task</h2>
-        <button onClick={() => hideModal()}>
-          <CgClose size={20} />
-        </button>
-      </ModalHeader>
-      <FormWrapper>
-        <Form ref={formRef} onSubmit={handleSubmit}>
-          <FormBody>
-            <TypeDateWrapper>
-              <SelectInput name="type" data={data} labels={labels} />
-              <DateInput name="date" />
-            </TypeDateWrapper>
-            <Input
-              name="title"
-              type="text"
-              placeholder="Enter a title for the task"
-            />
-            <Input name="content" type="text" placeholder="Describe the task" />
-            <FormButton>add task</FormButton>
-          </FormBody>
-        </Form>
-      </FormWrapper>
-    </ModalContainer>
+    <ModalWrapper>
+      <ModalContainer>
+        <ModalHeader>
+          <h2>Create a task</h2>
+          <button onClick={() => hideModal()}>
+            <CgClose size={20} />
+          </button>
+        </ModalHeader>
+        <FormWrapper>
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <FormBody>
+              <TypeDateWrapper>
+                <SelectInput name="type" data={data} labels={labels} />
+                <DateInput name="date" />
+              </TypeDateWrapper>
+              <Input
+                name="title"
+                type="text"
+                placeholder="Enter a title for the task"
+              />
+              <Input
+                name="content"
+                type="text"
+                placeholder="Describe the task"
+              />
+              <FormButton>add task</FormButton>
+            </FormBody>
+          </Form>
+        </FormWrapper>
+      </ModalContainer>
+    </ModalWrapper>
   );
 };
 

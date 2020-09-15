@@ -28,6 +28,8 @@ const SelectInput = ({ name, data, labels }) => {
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [handleClickOutside]);
 
   useEffect(() => {
