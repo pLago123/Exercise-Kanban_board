@@ -90,6 +90,7 @@ export const ModalWrapper = styled.div`
 
   @media only screen and (max-width: 426px) {
     min-width: 80vw;
+    max-height: 60vh;
   }
 `;
 
