@@ -41,41 +41,36 @@ export const Title = styled.div`
 const appearFromTop = keyframes`
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translate(-50%, -40%);
   } to {
     opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-export const ModalWrapper = styled.div`
-  display: flex;
-  max-width: 70vw;
-  min-width: 50vw;
-
-  margin: auto;
-
-  @media only screen and (max-width: 426px) {
-    min-width: 80vw;
-    max-height: 60vh;
+    transform: translate(-50%, -50%);
   }
 `;
 
 export const ModalContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  width: 100%;
-  height: 100%;
+  min-width: 70vw;
+  max-width: 100vw;
+  min-height: 250px;
+  max-height: 75vh;
 
   padding: 20px;
-
   border-radius: 3px;
 
   background-color: white;
 
   animation: ${appearFromTop} 0.5s;
+
+  overflow: auto;
+
+  @media only screen and (max-width: 426px) {
+    min-width: 80vw;
+  }
 `;
 
 export const ModalHeader = styled.div`

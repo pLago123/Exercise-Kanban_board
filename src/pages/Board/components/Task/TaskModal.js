@@ -5,7 +5,6 @@ import { useModal } from '~/context/Modal';
 import { useTasks } from '~/context/Tasks';
 
 import {
-  ModalWrapper,
   ModalContainer,
   ModalHeader,
   ModalTag,
@@ -29,32 +28,30 @@ const TaskModal = ({ task, taskIcon, columnId }) => {
   }, [task.id, columnId, removeTask, hideModal]);
 
   return (
-    <ModalWrapper>
-      <ModalContainer>
-        <ModalHeader>
-          <DateTagWrapper>
-            <ModalDate>{task.date}</ModalDate>
-            <DateTagDivider>{'/'}</DateTagDivider>
-            <ModalTag>
-              {taskIcon}
-              {task.type}
-            </ModalTag>
-          </DateTagWrapper>
-          <button onClick={() => hideModal()}>
-            <CgClose size={20} />
-          </button>
-        </ModalHeader>
-        <ModalBody>
-          <TaskTitle>{task.title}</TaskTitle>
-          <TaskDescription>
-            <h3>Description</h3>
-            <p>{task.content}</p>
-          </TaskDescription>
-        </ModalBody>
-        <Divider />
-        <DeleteButton onClick={handleRemoveTasks}>Delete Task</DeleteButton>
-      </ModalContainer>
-    </ModalWrapper>
+    <ModalContainer>
+      <ModalHeader>
+        <DateTagWrapper>
+          <ModalDate>{task.date}</ModalDate>
+          <DateTagDivider>{'/'}</DateTagDivider>
+          <ModalTag>
+            {taskIcon}
+            {task.type}
+          </ModalTag>
+        </DateTagWrapper>
+        <button onClick={() => hideModal()}>
+          <CgClose size={20} />
+        </button>
+      </ModalHeader>
+      <ModalBody>
+        <TaskTitle>{task.title}</TaskTitle>
+        <TaskDescription>
+          <h3>Description</h3>
+          <p>{task.content}</p>
+        </TaskDescription>
+      </ModalBody>
+      <Divider />
+      <DeleteButton onClick={handleRemoveTasks}>Delete Task</DeleteButton>
+    </ModalContainer>
   );
 };
 
